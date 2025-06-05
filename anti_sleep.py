@@ -11,7 +11,7 @@ print("Starting prevent sleep...")
 try:
     duration_hours = float(input("Enter duration in hours: "))
     duration_seconds = duration_hours * 3600
-    duration_seconds = 10  # For testing
+    # duration_seconds = 10  # For testing
     print(f"Preventing sleep for {duration_hours} hours...")
     start_time = time.time()
 
