@@ -19,7 +19,9 @@ try:
         x, y = pyautogui.position()  # Get the current mouse position
         pyautogui.moveTo(x + 5, y + 5, duration=0.1)  # Move the mouse slightly
         pyautogui.moveTo(x - 5, y - 5, duration=0.1)
-        # time.sleep(10)
+        time.sleep(10)
+    time.sleep(1)  # Wait a moment before putting the computer to sleep
+    sleep_computer()  # Put the computer to sleep after duration
 except KeyboardInterrupt:
     print("Stopping prevent sleep...")
     pass
@@ -27,7 +29,5 @@ except Exception as e:
     print(f"An error occurred: {e}")
 finally:
     print("Exiting program.")
-    pyautogui.moveTo(0, 0)
     time.sleep(1)  # Wait a moment before exiting
-    sleep_computer()  # Put the computer to sleep after duration
     exit(0)
